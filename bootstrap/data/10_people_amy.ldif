@@ -8,6 +8,7 @@ sn: Kroker
 description: Human
 givenName: Amy
 mail: amy@planetexpress.com
+memberOf: cn=ship_crew,ou=people,dc=planetexpress,dc=com
 ou: Intern
 uid: amy
 userPassword:: e3NzaGF9M3UzcUdCSmFMc2tiUEg0OVJrYlFtUk9HTktFb1lOUXZkU2lOZmc9P
