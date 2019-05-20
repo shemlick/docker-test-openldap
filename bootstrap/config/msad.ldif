@@ -19,7 +19,7 @@ olcObjectClasses: ( 1.2.840.113556.1.5.8 NAME 'Group'
         MAY ( member ) )
 
 # Add the memberOf attribute
-dn: cn={0}core,cn=schema,cn=config
+dn: cn=module{0},cn=config
 changetype: modify
 add: olcModuleLoad
 olcModuleLoad: memberof.la
