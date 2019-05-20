@@ -17,3 +17,9 @@ olcObjectClasses: ( 1.2.840.113556.1.5.8 NAME 'Group'
         SUP top STRUCTURAL
         MUST ( groupType $ cn)
         MAY ( member ) )
+
+# Add the memberOf attribute
+dn: cn={0}core,cn=schema,cn=config
+changetype: modify
+add: olcModuleLoad
+olcModuleLoad: memberof.la
