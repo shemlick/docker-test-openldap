@@ -1,8 +1,9 @@
 # Load memberof module
 dn: cn=module,cn=config
-changetype: modify
-add: olcModuleLoad
+cn: module
+objectClass: olcModuleList
 olcModuleLoad: memberof
+olcModulePath: /usr/lib/ldap
 
 # Backend memberOf overlay
 dn: olcOverlay={0}memberof,olcDatabase={1}hdb,cn=config
