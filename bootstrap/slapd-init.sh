@@ -73,7 +73,7 @@ configure_memberof_module(){
 
 configure_refint1_module(){
   echo "Configure refint1 Module"
-  ldapadd -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/refint1.ldif -Q
+  ldapmodify -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/refint1.ldif -Q
 }
 
 configure_refint2_module(){
