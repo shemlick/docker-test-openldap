@@ -1,5 +1,5 @@
 # Load memberof module
-dn: cn=module{0},cn=config
+dn: cn=module,cn=config
 changetype: modify
 add: olcModuleLoad
 olcModuleLoad: memberof
