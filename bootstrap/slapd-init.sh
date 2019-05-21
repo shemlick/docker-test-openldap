@@ -66,6 +66,21 @@ configure_msad_features(){
   ldapmodify -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/msad.ldif -Q
 }
 
+configure_memberof_module(){
+  echo "Configure memberOf Module"
+  ldapadd -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/memberof_config.ldif -Q
+}
+
+configure_refint1_module(){
+  echo "Configure refint1 Module"
+  ldapadd -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/refint1.ldif -Q
+}
+
+configure_refint2_module(){
+  echo "Configure refint2 Module"
+  ldapadd -Y EXTERNAL -H ldapi:/// -f ${CONFIG_DIR}/refint2.ldif -Q
+}
+
 load_initial_data() {
     echo "Load data..."
     local data=$(find ${DATA_DIR} -maxdepth 1 -name \*_\*.ldif -type f | sort)
@@ -87,6 +102,9 @@ chown -R openldap:openldap /etc/ldap
 slapd -h "ldapi:///" -u openldap -g openldap
 
 configure_msad_features
+configure_memberof_module
+configure_refint1_module
+configure_refint2_module
 configure_tls
 configure_logging
 load_initial_data
