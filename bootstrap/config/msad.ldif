@@ -17,21 +17,3 @@ olcObjectClasses: ( 1.2.840.113556.1.5.8 NAME 'Group'
         SUP top STRUCTURAL
         MUST ( groupType $ cn)
         MAY ( member ) )
-
-# Load memberof module
-dn: cn=module{0},cn=config
-changetype: modify
-add: olcModuleLoad
-olcModuleLoad: memberof
-
-# Backend memberOf overlay
-dn: olcOverlay={0}memberof,olcDatabase={1}{{ LDAP_BACKEND }},cn=config
-changetype: add
-objectClass: olcOverlayConfig
-objectClass: olcMemberOf
-olcOverlay: {0}memberof
-olcMemberOfDangling: ignore
-olcMemberOfRefInt: TRUE
-olcMemberOfGroupOC: groupOfUniqueNames
-olcMemberOfMemberAD: uniqueMember
-olcMemberOfMemberOfAD: memberOf
