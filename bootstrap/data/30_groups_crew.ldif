@@ -1,5 +1,5 @@
 dn: cn=ship_crew,ou=people,dc=planetexpress,dc=com
-objectclass: Group
+objectclass: groupOfNames
 objectclass: top
 groupType: 2147483650
 cn: ship_crew
