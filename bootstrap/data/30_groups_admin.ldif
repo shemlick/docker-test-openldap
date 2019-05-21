@@ -1,5 +1,5 @@
 dn: cn=admin_staff,ou=people,dc=planetexpress,dc=com
-objectclass: Group
+objectclass: groupOfNames
 objectclass: top
 groupType: 2147483650
 cn: admin_staff
