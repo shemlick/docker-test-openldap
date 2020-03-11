@@ -1,6 +1,6 @@
 
-dn: cn=robots,ou=people,dc=planetexpress,dc=com
+dn: cn=robots, machines, etc,ou=people,dc=planetexpress,dc=com
 objectclass: groupOfNames
 objectclass: top
-cn: robots
+cn: robots, machines, etc
 member: cn=Bender Bending Rodríguez,ou=people,dc=planetexpress,dc=com
