@@ -1,5 +1,5 @@
 
-dn: cn=robots\, machines\, etc\,ou=people,dc=planetexpress,dc=com
+dn: cn=robots\, machines\, etc,ou=people,dc=planetexpress,dc=com
 objectclass: groupOfNames
 objectclass: top
 cn: robots, machines, etc
